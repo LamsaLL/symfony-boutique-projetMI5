@@ -1,10 +1,15 @@
-index:
-  path: /
-  controller: App\Controller\DefaultController::index
 # config/routes.yaml
 
-# hello_page:
-#   path: /hello/{userName}
-#   controller: App\Controller\DefaultController::hello
-#   defaults:
-#     userName: "Anonyme"
+index:
+  path: /{_locale}
+  controller: App\Controller\DefaultController::index
+  requirements:
+    _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
+
+shop:
+  path: /shop
+  controller: App\Controller\shopController::shop
+  requirements:
+    _locale: "%app.supported_locales%"

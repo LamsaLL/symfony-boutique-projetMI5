@@ -2,5 +2,24 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<h1>Hello !</h1>
+	<div class="card col-md-12">
+		<div class="card-header">
+			<h1>
+				<i class="fas fa-home"></i>
+				{{ 'default.index.title' | trans }}
+			</h1>
+		</div>
+		<div class="card-body">
+			<div class="card clickable" onclick="location = '/mi5/fr/boutique'">
+				<img src="/mi5/images/epicerie.jpg" class="card-img-top" alt="Logo Boutique Symfony"/>
+				<div class="card-body">
+					<p class="card-text">
+						<i>
+							{{ 'default.index.devise_du_site' | trans }}
+						</i>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

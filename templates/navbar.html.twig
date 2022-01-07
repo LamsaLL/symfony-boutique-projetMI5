@@ -1,204 +1,99 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="/">
 		<i class="fas fa-home"></i>
 		Démo SF
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="/mi5/fr/boutique">
-						<i class="fas fa-store"></i>
-						Boutique
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="/shop">
+					<i class="fas fa-store"></i>
+					Boutique
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/mi5/fr/panier">
+					<i class="fas fa-shopping-cart"></i>
+					0 Produit(s)
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/mi5/fr/contact">
+					<i class="fas fa-comments"></i>
+					Contact
+				</a>
+			</li>
+			<li class="nav-item dropdown">
+				<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-user"></i>
+					Connexion
+				</span>
+				<div class="dropdown-menu" aria-labelledby="dropdown01">
+					<a class="dropdown-item " href="/mi5/fr/login">
+						Connexion/Inscription
 					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/mi5/fr/panier">
-						<i class="fas fa-shopping-cart"></i>
-						1 Produit(s)
+					<a class="dropdown-item disabled" href="/mi5/fr/usager/compte">
+						Mon Compte
 					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/mi5/fr/contact">
-						<i class="fas fa-comments"></i>
-						Contact
+					<a class="dropdown-item disabled" href="/mi5/fr/usager/commandes">
+						Mes Commandes
 					</a>
-				</li>
-				<li class="nav-item dropdown">
-
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="fas fa-user"></i>
-						Connexion
+					<a class="dropdown-item disabled" href="/mi5/fr/logout">
+						Déconnexion
 					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li>
-							<a class="dropdown-item " href="/mi5/fr/login">
-								Connexion/Inscription
-							</a>
-						</li>
-						<li>
-
-							<a class="dropdown-item disabled" href="/mi5/fr/usager/compte">
-								Mon Compte</a>
-						</li>
-						<li>
-
-							<a class="dropdown-item disabled" href="/mi5/fr/usager/commandes">
-								Mes Commandes</a>
-						</li>
-						<li>
-
-							<a class="dropdown-item disabled" href="/mi5/fr/logout">
-								Déconnexion</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-				</li>
-			</ul>
-			<form
-				class="d-flex">
-				{# <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> #}
-				<input class="form-control mr-sm-2" id="searchString" type="text" placeholder="Chercher Produits..." aria-label="Search">
-
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
-			<ul class="navbar-nav my-0">
-				<li class="nav-item dropdown">
-					<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						EUR
-					</span>
-					<div class="dropdown-menu" aria-labelledby="dropdown02" style="min-width: 5rem;">
-						<a class="dropdown-item" href="/mi5/fr/changer_monnaie/CAD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-							CAD
-						</a>
-						<a class="dropdown-item" href="/mi5/fr/changer_monnaie/USD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-							USD
-						</a>
-						<a class="dropdown-item" href="/mi5/fr/changer_monnaie/GBP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-							GBP
-						</a>
-						<a class="dropdown-item" href="/mi5/fr/changer_monnaie/PHP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-							PHP
-						</a>
-						<a class="dropdown-item" href="/mi5/fr/changer_monnaie/IDR/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-							IDR
-						</a>
-					</div>
-				</li>
-			</ul>
-			<ul class="navbar-nav my-0">
-				<li class="nav-item dropdown">
-					<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img src="/mi5/images/locale/fr.png" alt="Fr">
-					</span>
-					<div class="dropdown-menu" aria-labelledby="dropdown03" style="min-width: 5rem;">
-						<a class="dropdown-item" href="/mi5/en/boutique">
-							<img src="/mi5/images/locale/en.png" alt="En">
-						</a>
-					</div>
-				</li>
-			</ul>
-		</div>
+				</div>
+			</li>
+			<li class="nav-item" data-toggle="tooltip" title="Ne devra être visible que pour l'Admin" data-placement="right" data-html="true">
+				<span class="nav-link disabled" href="">
+					<i class="fas fa-tools"></i>
+					BackOffice
+				</span>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" id="searchString" type="text" placeholder="Chercher Produits..." aria-label="Search">
+			<button class="btn btn-secondary my-2 my-sm-0" id="searchButton">
+				<i class="fas fa-search"></i>
+			</button>
+		</form>
+		<ul class="navbar-nav my-0">
+			<li class="nav-item dropdown">
+				<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					EUR
+				</span>
+				<div class="dropdown-menu" aria-labelledby="dropdown02" style="min-width: 5rem;">
+					<a class="dropdown-item" href="/mi5/fr/changer_monnaie/CAD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
+						CAD
+					</a>
+					<a class="dropdown-item" href="/mi5/fr/changer_monnaie/USD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
+						USD
+					</a>
+					<a class="dropdown-item" href="/mi5/fr/changer_monnaie/GBP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
+						GBP
+					</a>
+					<a class="dropdown-item" href="/mi5/fr/changer_monnaie/PHP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
+						PHP
+					</a>
+					<a class="dropdown-item" href="/mi5/fr/changer_monnaie/IDR/boutique_index/%7B%22_locale%22:%22fr%22%7D">
+						IDR
+					</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="navbar-nav my-0">
+			<li class="nav-item dropdown">
+				<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="/mi5/images/locale/fr.png" alt="Fr">
+				</span>
+				<div class="dropdown-menu" aria-labelledby="dropdown03" style="min-width: 5rem;">
+					<a class="dropdown-item" href="/mi5/en/boutique">
+						<img src="/mi5/images/locale/en.png" alt="En">
+					</a>
+				</div>
+			</li>
+		</ul>
 	</div>
-</div></nav>{# <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-														<a class="navbar-brand" href="/mi5/">
-															<i class="fas fa-home"></i>
-															Démo SF
-														</a>
-														<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-															<span class="navbar-toggler-icon"></span>
-														</button>
-														<div class="collapse navbar-collapse">
-															<ul class="navbar-nav mr-auto">
-																<li class="nav-item">
-																	<a class="nav-link" href="/mi5/fr/boutique">
-																		<i class="fas fa-store"></i>
-																		Boutique
-																	</a>
-																</li>
-																<li class="nav-item">
-																	<a class="nav-link" href="/mi5/fr/panier">
-																		<i class="fas fa-shopping-cart"></i>
-																		1 Produit(s)
-																	</a>
-																</li>
-																<li class="nav-item">
-																	<a class="nav-link" href="/mi5/fr/contact">
-																		<i class="fas fa-comments"></i>
-																		Contact
-																	</a>
-																</li>
-																<li class="nav-item dropdown">
-																	<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																		<i class="fas fa-user"></i>
-																		Connexion
-																	</span>
-																	<div class="dropdown-menu" aria-labelledby="dropdown01">
-																		<a class="dropdown-item " href="/mi5/fr/login">
-																			Connexion/Inscription
-																		</a>
-																		<a class="dropdown-item disabled" href="/mi5/fr/usager/compte">
-																			Mon Compte
-																		</a>
-																		<a class="dropdown-item disabled" href="/mi5/fr/usager/commandes">
-																			Mes Commandes
-																		</a>
-																		<a class="dropdown-item disabled" href="/mi5/fr/logout">
-																			Déconnexion
-																		</a>
-																	</div>
-																</li>
-																<li class="nav-item" data-toggle="tooltip" title="Ne devra être visible que pour l'Admin" data-placement="right" data-html="true">
-																	<span class="nav-link disabled" href="">
-																		<i class="fas fa-tools"></i>
-																		BackOffice
-																	</span>
-																</li>
-															</ul>
-															<form class="form-inline my-2 my-lg-0">
-																<input class="form-control mr-sm-2" id="searchString" type="text" placeholder="Chercher Produits..." aria-label="Search">
-																<button class="btn btn-secondary my-2 my-sm-0" id="searchButton">
-																	<i class="fas fa-search"></i>
-																</button>
-															</form>
-															<ul class="navbar-nav my-0">
-																<li class="nav-item dropdown">
-																	<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																		EUR
-																	</span>
-																	<div class="dropdown-menu" aria-labelledby="dropdown02" style="min-width: 5rem;">
-																		<a class="dropdown-item" href="/mi5/fr/changer_monnaie/CAD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-																			CAD
-																		</a>
-																		<a class="dropdown-item" href="/mi5/fr/changer_monnaie/USD/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-																			USD
-																		</a>
-																		<a class="dropdown-item" href="/mi5/fr/changer_monnaie/GBP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-																			GBP
-																		</a>
-																		<a class="dropdown-item" href="/mi5/fr/changer_monnaie/PHP/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-																			PHP
-																		</a>
-																		<a class="dropdown-item" href="/mi5/fr/changer_monnaie/IDR/boutique_index/%7B%22_locale%22:%22fr%22%7D">
-																			IDR
-																		</a>
-																	</div>
-																</li>
-															</ul>
-															<ul class="navbar-nav my-0">
-																<li class="nav-item dropdown">
-																	<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																		<img src="/mi5/images/locale/fr.png" alt="Fr">
-																	</span>
-																	<div class="dropdown-menu" aria-labelledby="dropdown03" style="min-width: 5rem;">
-																		<a class="dropdown-item" href="/mi5/en/boutique">
-																			<img src="/mi5/images/locale/en.png" alt="En">
-																		</a>
-																	</div>
-																</li>
-															</ul>
-														</div>
-													</nav> #}
+</nav>
