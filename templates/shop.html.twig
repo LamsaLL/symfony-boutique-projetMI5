@@ -5,16 +5,19 @@
 		<div class="card-header">
 			<h1>
 				<i class="fas fa-store"></i>
-				Boutique : 4 Rayons</h1>
+				{{ 'shop.shop.backOffice' | trans }}</h1>
 		</div>
 		<div class="card-body row">
 			<div class="col-md-3">
 				<div class="card clickable" onclick="location = '/mi5/fr/boutique/rayon/1'">
 					<img src="/mi5/images/categories/fruits.jpg" class="card-img-top" alt="Fruits">
 					<div class="card-body">
-						<h4 class="card-title">Fruits</h4>
+						<h4 class="card-title">
+							{{ 'shop.shop.fruits' | trans }}
+						</h4>
 						<p class="card-text">
-							<i>De la passion ou de ton imagination</i>
+							<i>
+								{{ 'shop.shop.fruitsMotto' | trans }}</i>
 						</p>
 					</div>
 				</div>
@@ -23,9 +26,11 @@
 				<div class="card clickable" onclick="location = '/mi5/fr/boutique/rayon/3'">
 					<img src="/mi5/images/categories/junk_food.jpg" class="card-img-top" alt="Junk Food">
 					<div class="card-body">
-						<h4 class="card-title">Junk Food</h4>
+						<h4 class="card-title">
+							{{ 'shop.shop.junkFood' | trans }}
+						</h4>
 						<p class="card-text">
-							<i>Chère et cancérogène, tu es prévenu(e)</i>
+							<i>{{ 'shop.shop.junkFoodMotto' | trans }}</i>
 						</p>
 					</div>
 				</div>
@@ -34,9 +39,11 @@
 				<div class="card clickable" onclick="location = '/mi5/fr/boutique/rayon/2'">
 					<img src="/mi5/images/categories/legumes.jpg" class="card-img-top" alt="Légumes">
 					<div class="card-body">
-						<h4 class="card-title">Légumes</h4>
+						<h4 class="card-title">
+							{{ 'shop.shop.vegetables' | trans }}
+						</h4>
 						<p class="card-text">
-							<i>Plus tu en manges, moins tu en es un</i>
+							<i>{{ 'shop.shop.vegetablesMotto' | trans }}</i>
 						</p>
 					</div>
 				</div>
@@ -45,9 +52,12 @@
 				<div class="card clickable" onclick="location = '/mi5/fr/boutique/rayon/4'">
 					<img src="/mi5/images/categories/corona.jpg" class="card-img-top" alt="Virus">
 					<div class="card-body">
-						<h4 class="card-title">Virus</h4>
+						<h4 class="card-title">
+							{{ 'shop.shop.virus' | trans }}
+						</h4>
 						<p class="card-text">
-							<i>Une opportunité, il faut en profiter</i>
+							<i>
+								{{ 'shop.shop.virusMotto' | trans }}</i>
 						</p>
 					</div>
 				</div>
