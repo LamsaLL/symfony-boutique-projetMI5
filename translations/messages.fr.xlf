@@ -1,90 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-    <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
-        <header>
-            <tool tool-id="symfony" tool-name="Symfony"/>
-        </header>
-        <body>
-            <trans-unit id="foktJuG" resname="default.index.title">
-                <source>default.index.title</source>
-                <target>Démo Symfony</target>
-            </trans-unit>
-            <trans-unit id="TJcFVHR" resname="default.index.devise_du_site">
-                <source>default.index.devise_du_site</source>
-                <target>Ici rien à vendre, c'est juste pour apprendre</target>
-            </trans-unit>
-            <trans-unit id="k6SNMXX" resname="default.navbar.shop">
-                <source>default.navbar.shop</source>
-                <target>Boutique</target>
-            </trans-unit>
-            <trans-unit id="UFMmw8X" resname="default.navbar.nbOfProducts">
-                <source>default.navbar.nbOfProducts</source>
-                <target>(0) Produits</target>
-            </trans-unit>
-            <trans-unit id="88T1kfJ" resname="default.navbar.contact">
-                <source>default.navbar.contact</source>
-                <target>Contact</target>
-            </trans-unit>
-            <trans-unit id="P8RQkAp" resname="default.navbar.connexion">
-                <source>default.navbar.connexion</source>
-                <target>Connexion</target>
-            </trans-unit>
-            <trans-unit id="r7KolWR" resname="default.navbar.register">
-                <source>default.navbar.register</source>
-                <target>S'inscrire</target>
-            </trans-unit>
-            <trans-unit id="_YFXc4c" resname="default.navbar.myAccount">
-                <source>default.navbar.myAccount</source>
-                <target>Mon compte</target>
-            </trans-unit>
-            <trans-unit id="WFbZwIx" resname="default.navbar.myOrders">
-                <source>default.navbar.myOrders</source>
-                <target>Mes commandes</target>
-            </trans-unit>
-            <trans-unit id="_pGVyp_" resname="default.navbar.logout">
-                <source>default.navbar.logout</source>
-                <target>Se déconnecter</target>
-            </trans-unit>
-            <trans-unit id="FGtbd0P" resname="default.navbar.backOffice">
-                <source>default.navbar.backOffice</source>
-                <target>Back office</target>
-            </trans-unit>
-            <trans-unit id="s6dBTqh" resname="shop.shop.backOffice">
-                <source>shop.shop.backOffice</source>
-                <target>Back Office</target>
-            </trans-unit>
-            <trans-unit id="O_IfPjR" resname="shop.shop.fruits">
-                <source>shop.shop.fruits</source>
-                <target>Fruits</target>
-            </trans-unit>
-            <trans-unit id="848_krf" resname="shop.shop.fruitsMotto">
-                <source>shop.shop.fruitsMotto</source>
-                <target>De la passion ou de ton imagination</target>
-            </trans-unit>
-            <trans-unit id="vfnWhZU" resname="shop.shop.junkFood">
-                <source>shop.shop.junkFood</source>
-                <target>Junkfood</target>
-            </trans-unit>
-            <trans-unit id="yQitT0v" resname="shop.shop.junkFoodMotto">
-                <source>shop.shop.junkFoodMotto</source>
-                <target>Chère et cancérogène, tu es prévenu(e)</target>
-            </trans-unit>
-            <trans-unit id="IyaEmlT" resname="shop.shop.vegetables">
-                <source>shop.shop.vegetables</source>
-                <target>Légumes</target>
-            </trans-unit>
-            <trans-unit id="EniaLcl" resname="shop.shop.vegetablesMotto">
-                <source>shop.shop.vegetablesMotto</source>
-                <target>Plus tu en manges, moins tu en es un (de légume)</target>
-            </trans-unit>
-            <trans-unit id="EH.ZUsy" resname="shop.shop.virus">
-                <source>shop.shop.virus</source>
-                <target>Virus</target>
-            </trans-unit>
-            <trans-unit id="Hkb58VR" resname="shop.shop.virusMotto">
-                <source>shop.shop.virusMotto</source>
-                <target>Une opportunité, il faut en profiter</target>
-            </trans-unit>
-        </body>
-    </file>
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="foktJuG" resname="default.index.title">
+        <source>default.index.title</source>
+        <target>Démo Symfony</target>
+      </trans-unit>
+      <trans-unit id="TJcFVHR" resname="default.index.devise_du_site">
+        <source>default.index.devise_du_site</source>
+        <target>Ici rien à vendre, c'est juste pour apprendre</target>
+      </trans-unit>
+      <trans-unit id="k6SNMXX" resname="default.navbar.shop">
+        <source>default.navbar.shop</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="UFMmw8X" resname="default.navbar.nbOfProducts">
+        <source>default.navbar.nbOfProducts</source>
+        <target>(0) Produits</target>
+      </trans-unit>
+      <trans-unit id="88T1kfJ" resname="default.navbar.contact">
+        <source>default.navbar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="P8RQkAp" resname="default.navbar.connexion">
+        <source>default.navbar.connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="r7KolWR" resname="default.navbar.register">
+        <source>default.navbar.register</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit id="_YFXc4c" resname="default.navbar.myAccount">
+        <source>default.navbar.myAccount</source>
+        <target>Mon compte</target>
+      </trans-unit>
+      <trans-unit id="WFbZwIx" resname="default.navbar.myOrders">
+        <source>default.navbar.myOrders</source>
+        <target>Mes commandes</target>
+      </trans-unit>
+      <trans-unit id="_pGVyp_" resname="default.navbar.logout">
+        <source>default.navbar.logout</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="FGtbd0P" resname="default.navbar.backOffice">
+        <source>default.navbar.backOffice</source>
+        <target>Back office</target>
+      </trans-unit>
+      <trans-unit id="s6dBTqh" resname="shop.shop.backOffice">
+        <source>shop.shop.backOffice</source>
+        <target>Back Office</target>
+      </trans-unit>
+      <trans-unit id="O_IfPjR" resname="shop.shop.fruits">
+        <source>shop.shop.fruits</source>
+        <target>Fruits</target>
+      </trans-unit>
+      <trans-unit id="848_krf" resname="shop.shop.fruitsMotto">
+        <source>shop.shop.fruitsMotto</source>
+        <target>De la passion ou de ton imagination</target>
+      </trans-unit>
+      <trans-unit id="vfnWhZU" resname="shop.shop.junkFood">
+        <source>shop.shop.junkFood</source>
+        <target>Junkfood</target>
+      </trans-unit>
+      <trans-unit id="yQitT0v" resname="shop.shop.junkFoodMotto">
+        <source>shop.shop.junkFoodMotto</source>
+        <target>Chère et cancérogène, tu es prévenu(e)</target>
+      </trans-unit>
+      <trans-unit id="IyaEmlT" resname="shop.shop.vegetables">
+        <source>shop.shop.vegetables</source>
+        <target>Légumes</target>
+      </trans-unit>
+      <trans-unit id="EniaLcl" resname="shop.shop.vegetablesMotto">
+        <source>shop.shop.vegetablesMotto</source>
+        <target>Plus tu en manges, moins tu en es un (de légume)</target>
+      </trans-unit>
+      <trans-unit id="EH.ZUsy" resname="shop.shop.virus">
+        <source>shop.shop.virus</source>
+        <target>Virus</target>
+      </trans-unit>
+      <trans-unit id="Hkb58VR" resname="shop.shop.virusMotto">
+        <source>shop.shop.virusMotto</source>
+        <target>Une opportunité, il faut en profiter</target>
+      </trans-unit>
+      <trans-unit id="x0Nx.uz" resname="shop.index.backOffice">
+        <source>shop.index.backOffice</source>
+        <target>__shop.index.backOffice</target>
+      </trans-unit>
+      <trans-unit id="cZiMTY4" resname="Text">
+        <source>Text</source>
+        <target>__Text</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

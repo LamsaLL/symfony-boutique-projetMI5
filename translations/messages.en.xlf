@@ -85,6 +85,14 @@
         <source>shop.shop.virusMotto</source>
         <target>__shop.shop.virusMotto</target>
       </trans-unit>
+      <trans-unit id="x0Nx.uz" resname="shop.index.backOffice">
+        <source>shop.index.backOffice</source>
+        <target>__shop.index.backOffice</target>
+      </trans-unit>
+      <trans-unit id="cZiMTY4" resname="Text">
+        <source>Text</source>
+        <target>__Text</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
