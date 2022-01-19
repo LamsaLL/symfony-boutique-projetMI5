@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="card col-md-12">
+		<div class="card-header">
+			<h1>
+				<i class="fas fa-store"></i>
+				Rayon &quot;{{category.name}}&quot; : 3 Produit(s)</h1>
+		</div>
+		<div class="card-body row">
+			{% for product in products %}
+				<div class="col-md-4">
+					<div class="card clickable" onclick="location = '/mi5/fr/panier/ajouter/3'">
+						<img src={{asset(product.image)}} class="card-img-produit" alt={{product.name}}>
+						<div class="card-body">
+							<h4 class="card-title">{{product.name}}</h4>
+							<p class="card-text">
+								<i>{{product.text}}</i>
+							</p>
+							<h2>
+								<span class="badge badge-primary">
+									<i class="fas fa-cart-plus"></i>&nbsp;&nbsp;
+																																																																																																												                                    2,84 €
+								</span>
+							</h2>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

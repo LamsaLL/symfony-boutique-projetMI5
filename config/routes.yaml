@@ -8,25 +8,26 @@ index:
   defaults:
     _locale: fr
 
-shop:
+shop_index:
   path: /shop
   controller: App\Controller\ShopController::index
   requirements:
     _locale: "%app.supported_locales%"
 
-department:
-  path: /shop/{categoryId}
+shop_department:
+  path: /shop/department/{categoryId}
   controller: App\Controller\ShopController::department
+  methods: GET|HEAD
   requirements:
     _locale: "%app.supported_locales%"
 
-cart:
+cart_index:
   path: /cart
   controller: App\Controller\CartController::index
   requirements:
     _locale: "%app.supported_locales%"
 
-contact:
+contact_index:
   path: /contact
   controller: App\Controller\ContactController::index
   requirements:

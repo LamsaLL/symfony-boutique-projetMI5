@@ -13,10 +13,13 @@ class ShopController extends AbstractController {
         ]);
     }
 
-    public function department($categoryId, ProductRepository $productRepository) {
+    public function department($categoryId, ProductRepository $productRepository, CategoryRepository $categoryRepository) {
+        // Get the category object with given id
+        $category = $categoryRepository->find($categoryId);
         // Show all products with the given categoryId
         $products = $productRepository->findBy(["category" => $categoryId]);
-        return $this->render('shop.html.twig', [
+        return $this->render('department.html.twig', [
+           "category" => $category,
            "products" => $products
         ]);
     }
