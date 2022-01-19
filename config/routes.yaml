@@ -10,12 +10,24 @@ index:
 
 shop:
   path: /shop
-  controller: App\Controller\shopController::shop
+  controller: App\Controller\ShopController::index
+  requirements:
+    _locale: "%app.supported_locales%"
+
+department:
+  path: /shop/{categoryId}
+  controller: App\Controller\ShopController::department
+  requirements:
+    _locale: "%app.supported_locales%"
+
+cart:
+  path: /cart
+  controller: App\Controller\CartController::index
   requirements:
     _locale: "%app.supported_locales%"
 
 contact:
   path: /contact
-  controller: App\Controller\contactController::contact
+  controller: App\Controller\ContactController::index
   requirements:
     _locale: "%app.supported_locales%"
