@@ -4,6 +4,10 @@
 namespace App\Service;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Service\ShopService;
+use App\Entity\User;
+use App\Entity\Order;
+use App\Entity\OrderRow;
+
 // Service pour manipuler le panier et le stocker en session
 class CartService {
  ////////////////////////////////////////////////////////////////////////////
@@ -12,13 +16,14 @@ class CartService {
  private $shop; // Le service Boutique
  private $cart; // Tableau associatif idProduit => quantite
  // donc $this->cart[$i] = quantiy du produit dont l'id = $id
+
  // constructeur du service
  public function __construct(SessionInterface $session, ShopService $shop) {
- // Récupération des services session et BoutiqueService
- $this->shop = $shop;
- $this->session = $session;
- // Récupération du panier en session s'il existe, init. à vide sinon
- $this->cart = $this->session->get(self::Cart_SESSION);// initialisation du Panier : à compléter,
+    // Récupération des services session et BoutiqueService
+    $this->shop = $shop;
+    $this->session = $session;
+    // Récupération du panier en session s'il existe, init. à vide sinon
+    $this->cart = $this->session->get(self::Cart_SESSION);// initialisation du Panier : à compléter,
  }
  // getContenu renvoie le contenu du panier
  // tableau d'éléments [ "produit" => un produit, "quantite" => quantite ]
@@ -119,6 +124,23 @@ class CartService {
     }
     // On enregistre le panier en session
     $this->session->set(self::Cart_SESSION, $this->cart);
+  }
+
+  public function cartToOrder(User $user){
+    // Create order from cart if not empty with the given user and clear the cart 
+    if ($this->cart) {
+        $order = new Order();
+        $order->setUser($user);
+        $order->setDate(new \DateTime());
+        $order->setStatus("En cours");
+        // foreach row in cart add an orderRow in order
+        foreach ($this->cart as $id => $quantity) {
+            $order->addOrderRow(new OrderRow($this->shop->findProductById($id), $quantity));
+        }
+        $this->cart = [];
+        $this->session->set(self::Cart_SESSION, $this->cart);
+        return $order;
+    }
   }
 
  // Vider vide complètement le panier
