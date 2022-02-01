@@ -8,6 +8,18 @@ index:
   defaults:
     _locale: fr
 
+user_index:
+  path: /user
+  controller: App\Controller\UserController::index
+  requirements:
+    _locale: "%app.supported_locales%"
+
+user_new:
+  path: /user/new
+  controller: App\Controller\UserController::new
+  requirements:
+    _locale: "%app.supported_locales%"
+
 shop_index:
   path: /shop
   controller: App\Controller\ShopController::index
@@ -24,6 +36,12 @@ shop_department:
 cart_index:
   path: /cart
   controller: App\Controller\CartController::index
+  requirements:
+    _locale: "%app.supported_locales%"
+
+cart_validation:
+  path: /cart/validation
+  controller: App\Controller\CartController::validation
   requirements:
     _locale: "%app.supported_locales%"
 
