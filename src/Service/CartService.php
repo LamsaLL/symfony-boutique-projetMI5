@@ -7,20 +7,21 @@ use App\Service\ShopService;
 use App\Entity\User;
 use App\Entity\Order;
 use App\Entity\OrderRow;
+use App\Repository\ProductRepository;
 
 // Service pour manipuler le panier et le stocker en session
 class CartService {
  ////////////////////////////////////////////////////////////////////////////
  const Cart_SESSION = 'panier'; // Le nom de la variable de session du panier
  private $session; // Le service Session
- private $shop; // Le service Boutique
+ private $product; // Le produit
  private $cart; // Tableau associatif idProduit => quantite
  // donc $this->cart[$i] = quantiy du produit dont l'id = $id
 
  // constructeur du service
- public function __construct(SessionInterface $session, ShopService $shop) {
+ public function __construct(SessionInterface $session, ProductRepository $product) {
     // Récupération des services session et BoutiqueService
-    $this->shop = $shop;
+    $this->product = $product;
     $this->session = $session;
     // Récupération du panier en session s'il existe, init. à vide sinon
     $this->cart = $this->session->get(self::Cart_SESSION);// initialisation du Panier : à compléter,
@@ -35,7 +36,7 @@ class CartService {
         // On crée un tableau d'éléments [ "product" => product, "quantity" => quantity ]
         foreach ($this->cart as $id => $quantity) {
             $products[] = [
-                'product' => $this->shop->findProductById($id),
+                'product' => $this->product->find($id),
                 'quantity' => $quantity,
             ];
         } 
@@ -52,7 +53,7 @@ class CartService {
         $total = 0;
         // On crée un tableau d'éléments [ "product" => product, "quantity" => quantity ]
         foreach ($this->cart as $id => $quantity) {
-            $product = $this->shop->findProductById($id);
+            $product = $this->product->find($id);
             $total += $product["price"] * $quantity;
         }
         return $total;
@@ -135,7 +136,7 @@ class CartService {
         $order->setStatus("En cours");
         // foreach row in cart add an orderRow in order
         foreach ($this->cart as $id => $quantity) {
-            $order->addOrderRow(new OrderRow($this->shop->findProductById($id), $quantity));
+            $order->addOrderRow(new OrderRow($this->product->find($id), $quantity));
         }
         $this->cart = [];
         $this->session->set(self::Cart_SESSION, $this->cart);
