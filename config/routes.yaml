@@ -39,6 +39,18 @@ cart_index:
   requirements:
     _locale: "%app.supported_locales%"
 
+cart_add:
+  path: /cart/add/{productId}/{quantity}
+  controller: App\Controller\CartController::add
+  requirements:
+    _locale: "%app.supported_locales%"
+
+cart_remove:
+  path: /cart/remove/{productId}/{quantity}
+  controller: App\Controller\CartController::remove
+  requirements:
+    _locale: "%app.supported_locales%"
+
 cart_validation:
   path: /cart/validation
   controller: App\Controller\CartController::validation
