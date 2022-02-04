@@ -5,6 +5,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\ShopService;
 use App\Repository\CategoryRepository;
 use App\Repository\ProductRepository;
+
 class ShopController extends AbstractController {
     public function index(CategoryRepository $categoryRepository) {
         $categories = $categoryRepository->findAll();

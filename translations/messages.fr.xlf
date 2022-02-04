@@ -19,7 +19,7 @@
       </trans-unit>
       <trans-unit id="UFMmw8X" resname="default.navbar.nbOfProducts">
         <source>default.navbar.nbOfProducts</source>
-        <target>(0) Produits</target>
+        <target> Produit(s)</target>
       </trans-unit>
       <trans-unit id="88T1kfJ" resname="default.navbar.contact">
         <source>default.navbar.contact</source>
