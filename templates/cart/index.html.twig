@@ -52,8 +52,8 @@
 										€
 									</td>
 									<td>
-										<a href="/cart/delete/3">
-											<i class="fas fa-trash text-muted" data-toggle="tooltip" title="Supprimer Pêche" data-placement="right" data-html="true"></i>
+										<a href={{ "/cart/delete/" ~ product.product.id }}>
+											<i class="fas fa-trash text-muted" data-toggle="tooltip" title={{ "Supprimer " ~ product.product.name }} data-placement="right" data-html="true"></i>
 										</a>
 									</td>
 								</tr>

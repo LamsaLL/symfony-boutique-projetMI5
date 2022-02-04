@@ -51,6 +51,12 @@ cart_remove:
   requirements:
     _locale: "%app.supported_locales%"
 
+cart_delete:
+  path: /cart/delete/{productId}
+  controller: App\Controller\CartController::delete
+  requirements:
+    _locale: "%app.supported_locales%"
+
 cart_validation:
   path: /cart/validation
   controller: App\Controller\CartController::validation
