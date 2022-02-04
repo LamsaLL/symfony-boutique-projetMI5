@@ -54,7 +54,7 @@ class CartService {
         // On crée un tableau d'éléments [ "product" => product, "quantity" => quantity ]
         foreach ($this->cart as $id => $quantity) {
             $product = $this->product->find($id);
-            $total += $product["price"] * $quantity;
+            $total += $product->getPrice() * $quantity;
         }
         return $total;
     }
