@@ -36,6 +36,13 @@ class CartController extends AbstractController {
         return $this->redirectToRoute('cart_index');
     }
 
+    public function clear(CartService $cart) {
+        // delete product to cart
+        $cart->clear();
+        // redirect to cart page and index route
+        return $this->redirectToRoute('cart_index');
+    }
+
     public function validation(){
 
         // Display numero and date of the order

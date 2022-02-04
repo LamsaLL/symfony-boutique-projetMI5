@@ -144,7 +144,7 @@ class CartService {
     }
   }
 
- // Vider vide complètement le panier
+ // Clear vide complètement le panier
  public function clear() { 
     // Si le panier n'est pas vide
     if ($this->cart) {
