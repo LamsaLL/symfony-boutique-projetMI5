@@ -75,37 +75,37 @@ class CartService {
  }
 
  // AjouterProduit ajoute au panier le produit $idProduit en quantite $quantite
- public function addProduct(int $idProduct, int $quantity = 1) {
+ public function addProduct(int $productId, int $quantity = 1) {
     // Si le panier n'est pas vide
     if ($this->cart) {
         // Si le produit est déjà dans le panier
-        if (array_key_exists($idProduct, $this->cart)) {
+        if (array_key_exists($productId, $this->cart)) {
             // On ajoute la quantité
-            $this->cart[$idProduct] += $quantity;
+            $this->cart[$productId] += $quantity;
         } else {
             // Sinon on ajoute le produit
-            $this->cart[$idProduct] = $quantity;
+            $this->cart[$productId] = $quantity;
         }
     } else {
         // Sinon on crée le panier
-        $this->cart = [$idProduct => $quantity];
+        $this->cart = [$productId => $quantity];
     }
     // On enregistre le panier en session
     $this->session->set(self::Cart_SESSION, $this->cart);
  } 
 
  // EnleverProduit enlève du panier le produit $idProduit en quantite $quantite
- public function removeProduct(int $idProduct, int $quantity = 1) {
+ public function removeProduct(int $productId, int $quantity = 1) {
     // Si le panier n'est pas vide
     if ($this->cart) {
         // Si le produit est dans le panier
-        if (array_key_exists($idProduct, $this->cart)) {
+        if (array_key_exists($productId, $this->cart)) {
             // On enlève la quantité
-            $this->cart[$idProduct] -= $quantity;
+            $this->cart[$productId] -= $quantity;
             // Si la quantité est nulle ou négative
-            if ($this->cart[$idProduct] <= 0) {
+            if ($this->cart[$productId] <= 0) {
                 // On supprime le produit
-                unset($this->cart[$idProduct]);
+                unset($this->cart[$productId]);
             }
         }
     }
@@ -114,13 +114,13 @@ class CartService {
  } 
 
  // SupprimerProduit supprime complètement le produit $idProduit du panier
- public function deleteProduct(int $idProduct) {
+ public function deleteProduct(int $productId) {
     // Si le panier n'est pas vide
     if ($this->cart) {
         // Si le produit est dans le panier
-        if (array_key_exists($idProduct, $this->cart)) {
+        if (array_key_exists($productId, $this->cart)) {
             // On supprime le produit
-            unset($this->cart[$idProduct]);
+            unset($this->cart[$productId]);
         }
     }
     // On enregistre le panier en session
