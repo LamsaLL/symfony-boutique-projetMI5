@@ -18,10 +18,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/cart">
-					<i class="fas fa-shopping-cart"></i>
-					{{ nbProducts ~ 'default.navbar.nbOfProducts' | trans }}
-				</a>
+				{{ render(controller('App\\Controller\\CartController::nbProducts')) }}
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="/contact">

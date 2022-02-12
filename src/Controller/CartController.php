@@ -15,6 +15,12 @@ class CartController extends AbstractController {
         ]);
     }
 
+    public function nbProducts(CartService $cart) {
+        return $this->render('cart/nbProducts.html.twig', [
+            'nbProducts' => $cart->getNbProducts()
+        ]);
+    }
+
     //TODO: set $quantity to 1 if it is not set
     public function add($productId, $quantity, CartService $cart) {
         // add new product to cart
@@ -46,7 +52,6 @@ class CartController extends AbstractController {
     }
 
     public function validation(){
-
         // Display numero and date of the order
         return $this->render('Cart/validation.html.twig');
     }

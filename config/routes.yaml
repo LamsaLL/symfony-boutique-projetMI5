@@ -39,6 +39,12 @@ cart_index:
   requirements:
     _locale: "%app.supported_locales%"
 
+cart_nbProducts:
+  path: /cart/nbProducts
+  controller: App\Controller\CartController::nbProducts
+  requirements:
+    _locale: "%app.supported_locales%"
+
 cart_add:
   path: /cart/add/{productId}/{quantity}
   controller: App\Controller\CartController::add
