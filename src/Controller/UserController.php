@@ -14,20 +14,20 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+
 class UserController extends AbstractController
 {
     public function index(UserRepository $userRepository): Response
     {
-        return $this->render('user/index.html.twig', [
-            'users' => $userRepository->findAll(),
-        ]);
+        return $this->render('user/index.html.twig');
     }
 
     public function new(Request $request, EntityManagerInterface $entityManager,
                         UserPasswordHasherInterface $passwordHasher): Response
     {
         $user = new User();
-        $form = $this->createForm(UsagerType::class, $user);
+        $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // Encoder le mot de passe qui est en clair pour l’instant
@@ -41,6 +41,6 @@ class UserController extends AbstractController
             // Après l’inscription, rediriger vers l’authentification
             return $this->redirectToRoute('app_login');
         }
-        return $this->renderForm('user/new.html.twig', ['usager' => $user, 'form' => $form]);
+        return $this->renderForm('user/new.html.twig', ['user' => $user, 'form' => $form]);
     }
 }

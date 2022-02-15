@@ -20,6 +20,14 @@ user_new:
   requirements:
     _locale: "%app.supported_locales%"
 
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController:login
+
+app_logout:
+  path: /logout
+  controller: App\Controller\SecurityController:login
+
 shop_index:
   path: /shop
   controller: App\Controller\ShopController::index
