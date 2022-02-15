@@ -20,6 +20,12 @@ user_new:
   requirements:
     _locale: "%app.supported_locales%"
 
+user_orders:
+  path: /user/orders
+  controller: App\Controller\UserController::orders
+  requirements:
+    _locale: "%app.supported_locales%"
+
 app_login:
   path: /login
   controller: App\Controller\SecurityController:login

@@ -1,0 +1,37 @@
+{% set userOrders = app.user.getOrders()  %}
+
+{% extends "base.html.twig" %}
+{% block body %}
+	<div class="col-8 offset-2">
+		<div class="card">
+			<div class="card-header">
+				<h3>
+					<i class="fas fa-user-check"></i>
+					Mes Commandes</h3>
+			</div>
+			<div class="card-body">
+				<table class="table table-striped table-sm table-hover">
+					<thead>
+						<tr>
+							<th>N°</th>
+							<th>Date</th>
+							<th>Statut</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						{% for userOrder in userOrders  %}
+							<tr class="text-danger" style='font-weight: bold;'>
+								<td>{{ userOrder.id }}</td>
+								<td>{{ userOrder.date | date('Y-m-d H:i:s', "Europe/Paris") }}</td>
+								<td>
+									<i class="fas fa-hourglass-half" data-toggle="tooltip" title="validation en Attente" data-placement="right"></i>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

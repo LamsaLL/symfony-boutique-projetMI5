@@ -8,21 +8,22 @@ use App\Entity\User;
 use App\Entity\Order;
 use App\Entity\OrderRow;
 use App\Repository\ProductRepository;
-
+use Doctrine\ORM\EntityManagerInterface;
 // Service pour manipuler le panier et le stocker en session
 class CartService {
  ////////////////////////////////////////////////////////////////////////////
  const Cart_SESSION = 'panier'; // Le nom de la variable de session du panier
+ private $entityManager;
  private $session; // Le service Session
  private $product; // Le produit
  private $cart; // Tableau associatif idProduit => quantite
  // donc $this->cart[$i] = quantiy du produit dont l'id = $id
 
  // constructeur du service
- public function __construct(SessionInterface $session, ProductRepository $product) {
-    // Récupération des services session et BoutiqueService
+ public function __construct(SessionInterface $session, ProductRepository $product, EntityManagerInterface $entityManager) {
     $this->product = $product;
     $this->session = $session;
+    $this->entityManager = $entityManager;
     // Récupération du panier en session s'il existe, init. à vide sinon
     $this->cart = $this->session->get(self::Cart_SESSION);// initialisation du Panier : à compléter,
  }
@@ -132,13 +133,20 @@ class CartService {
     if ($this->cart) {
         $order = new Order();
         $order->setUser($user);
-        $order->setDate(new \DateTime());
+        $order->setDate(new \DateTime('now'));
         $order->setStatus("En cours");
         // foreach row in cart add an orderRow in order
         foreach ($this->cart as $id => $quantity) {
-            $order->addOrderRow(new OrderRow($this->product->find($id), $quantity));
+            $orderRow = new OrderRow();
+            $product = $this->product->find($id);
+            $totalPriceRow = $product->getPrice() * $quantity;
+            
+            $orderRow->setProduct($product);
+            $orderRow->setQuantity($quantity);
+            $orderRow->setOrderItem($order);
+            $orderRow->setPrice($totalPriceRow);
+            $order->addOrderRow($orderRow);
         }
-        $this->cart = [];
         $this->session->set(self::Cart_SESSION, $this->cart);
         return $order;
     }

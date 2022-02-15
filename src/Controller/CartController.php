@@ -4,6 +4,8 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Repository\ProductRepository;
 use App\Service\CartService;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Security\Core\Security;
 
 class CartController extends AbstractController {
     public function index(CartService $cart) {
@@ -51,8 +53,16 @@ class CartController extends AbstractController {
         return $this->redirectToRoute('cart_index');
     }
 
-    public function validation(){
-        // Display numero and date of the order
-        return $this->render('Cart/validation.html.twig');
+    public function validation(Security $security, CartService $cart, EntityManagerInterface $entityManager, ProductRepository $productRepository){
+        $user = $this->getUser();
+        // $user = $entityManager->getRepository('App\Entity\User')->findOneBy(['email' => $userId]);
+        
+        $order = $cart->cartToOrder($user);
+        
+        $entityManager->persist($order);
+        $entityManager->flush();
+        $cart->clear();
+        // Display num and date of the order
+        return $this->redirectToRoute('user_orders');
     }
 }

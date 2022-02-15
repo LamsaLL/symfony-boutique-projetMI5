@@ -37,7 +37,7 @@ class Order
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity=OrderRow::class, mappedBy="orderItem", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=OrderRow::class, mappedBy="orderItem", orphanRemoval=true, cascade={"persist"})
      */
     private $orderRows;
 

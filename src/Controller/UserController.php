@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\Security\Core\Security;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
@@ -42,5 +42,10 @@ class UserController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
         return $this->renderForm('user/new.html.twig', ['user' => $user, 'form' => $form]);
+    }
+
+    public function orders(): Response
+    {
+        return $this->render('user/orders.html.twig');
     }
 }
