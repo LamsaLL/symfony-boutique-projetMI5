@@ -53,7 +53,7 @@ class CartController extends AbstractController {
         return $this->redirectToRoute('cart_index');
     }
 
-    public function validation(Security $security, CartService $cart, EntityManagerInterface $entityManager, ProductRepository $productRepository){
+    public function validation(CartService $cart, EntityManagerInterface $entityManager){
         $user = $this->getUser();
         // $user = $entityManager->getRepository('App\Entity\User')->findOneBy(['email' => $userId]);
         
