@@ -14,8 +14,11 @@ class ShopController extends AbstractController
     public function index(CategoryRepository $categoryRepository)
     {
         $categories = $categoryRepository->findAll();
+        // Count number of categories
+        $count = count($categories);
         return $this->render('shop.html.twig', [
-            "categories" => $categories
+            "categories" => $categories,
+            'nbCategories' => $count
         ]);
     }
 
