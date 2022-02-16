@@ -40,6 +40,12 @@ shop_index:
   requirements:
     _locale: "%app.supported_locales%"
 
+shop_search:
+  path: /shop/search/{search}
+  controller: App\Controller\ShopController::search
+  requirements:
+    _locale: "%app.supported_locales%"
+
 shop_department:
   path: /shop/department/{categoryId}
   controller: App\Controller\ShopController::department
