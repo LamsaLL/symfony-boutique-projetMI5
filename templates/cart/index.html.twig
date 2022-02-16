@@ -1,13 +1,10 @@
 {% extends 'base.html.twig' %}
-
-
 {% block body %}
 	<div class="card col-md-12">
 		<div class="card-header">
 			<h1>
 				<i class="fas fa-shopping-cart"></i>
 				{% if products|length > 0 %}
-
 					{{ nbProducts }}
 					Produit(s) :
 					<b>{{ total }}
@@ -101,4 +98,5 @@
 			</div>
 			<div class="card-body"></div>
 		</div>
-	{% endblock %}
+	</div>
+{% endblock %}
