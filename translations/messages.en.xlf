@@ -7,55 +7,55 @@
     <body>
       <trans-unit id="foktJuG" resname="default.index.title">
         <source>default.index.title</source>
-        <target>__default.index.title</target>
+        <target>Symfony Demo</target>
       </trans-unit>
       <trans-unit id="TJcFVHR" resname="default.index.devise_du_site">
         <source>default.index.devise_du_site</source>
-        <target>__default.index.devise_du_site</target>
+        <target>We don't sell anything, we just want to learn</target>
       </trans-unit>
       <trans-unit id="k6SNMXX" resname="default.navbar.shop">
         <source>default.navbar.shop</source>
-        <target>__default.navbar.shop</target>
+        <target>Shop</target>
       </trans-unit>
       <trans-unit id="UFMmw8X" resname="default.navbar.nbOfProducts">
         <source>default.navbar.nbOfProducts</source>
-        <target>__default.navbar.nbOfProducts</target>
+        <target> Item(s)</target>
       </trans-unit>
       <trans-unit id="88T1kfJ" resname="default.navbar.contact">
         <source>default.navbar.contact</source>
-        <target>__default.navbar.contact</target>
+        <target>Contact</target>
       </trans-unit>
       <trans-unit id="P8RQkAp" resname="default.navbar.connexion">
         <source>default.navbar.connexion</source>
-        <target>__default.navbar.connexion</target>
+        <target>Sign in</target>
       </trans-unit>
       <trans-unit id="r7KolWR" resname="default.navbar.register">
         <source>default.navbar.register</source>
-        <target>__default.navbar.register</target>
+        <target>Sign in/Register</target>
       </trans-unit>
       <trans-unit id="_YFXc4c" resname="default.navbar.myAccount">
         <source>default.navbar.myAccount</source>
-        <target>__default.navbar.myAccount</target>
+        <target>My account</target>
       </trans-unit>
       <trans-unit id="WFbZwIx" resname="default.navbar.myOrders">
         <source>default.navbar.myOrders</source>
-        <target>__default.navbar.myOrders</target>
+        <target>My orders</target>
       </trans-unit>
       <trans-unit id="_pGVyp_" resname="default.navbar.logout">
         <source>default.navbar.logout</source>
-        <target>__default.navbar.logout</target>
+        <target>Logout</target>
       </trans-unit>
       <trans-unit id="FGtbd0P" resname="default.navbar.backOffice">
         <source>default.navbar.backOffice</source>
-        <target>__default.navbar.backOffice</target>
+        <target>BackOffice</target>
       </trans-unit>
       <trans-unit id="s6dBTqh" resname="shop.shop.backOffice">
         <source>shop.shop.backOffice</source>
-        <target>__shop.shop.backOffice</target>
+        <target>Store</target>
       </trans-unit>
       <trans-unit id="O_IfPjR" resname="shop.shop.fruits">
         <source>shop.shop.fruits</source>
-        <target>__shop.shop.fruits</target>
+        <target>Fruits</target>
       </trans-unit>
       <trans-unit id="848_krf" resname="shop.shop.fruitsMotto">
         <source>shop.shop.fruitsMotto</source>
@@ -63,7 +63,7 @@
       </trans-unit>
       <trans-unit id="vfnWhZU" resname="shop.shop.junkFood">
         <source>shop.shop.junkFood</source>
-        <target>__shop.shop.junkFood</target>
+        <target>Junk Food</target>
       </trans-unit>
       <trans-unit id="yQitT0v" resname="shop.shop.junkFoodMotto">
         <source>shop.shop.junkFoodMotto</source>
@@ -71,7 +71,7 @@
       </trans-unit>
       <trans-unit id="IyaEmlT" resname="shop.shop.vegetables">
         <source>shop.shop.vegetables</source>
-        <target>__shop.shop.vegetables</target>
+        <target>Vegetables</target>
       </trans-unit>
       <trans-unit id="EniaLcl" resname="shop.shop.vegetablesMotto">
         <source>shop.shop.vegetablesMotto</source>
@@ -87,7 +87,7 @@
       </trans-unit>
       <trans-unit id="x0Nx.uz" resname="shop.index.backOffice">
         <source>shop.index.backOffice</source>
-        <target>__shop.index.backOffice</target>
+        <target>Store : </target>
       </trans-unit>
       <trans-unit id="cZiMTY4" resname="Text">
         <source>Text</source>

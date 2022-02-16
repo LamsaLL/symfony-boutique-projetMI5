@@ -1,7 +1,9 @@
+{% set route = app.request.attributes.get('_route') %}
+{% set params = app.request.attributes.get('_route_params') %}
 {% set disableIfNotConnected = app.user ? '' : 'disabled' %}
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-	<a class="navbar-brand" href="/">
+	<a class="navbar-brand" href="{{ path('index') }}">
 		<i class="fas fa-home"></i>
 		Démo SF
 	</a>
@@ -88,12 +90,22 @@
 		<ul class="navbar-nav my-0">
 			<li class="nav-item dropdown">
 				<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<img src="/mi5/images/locale/fr.png" alt="Fr"/>
+					{% if app.request.attributes.get('_locale') == 'fr' %}
+						<img src="{{asset('images/locale/fr.png')}}" alt="Fr"/>
+					{% else %}
+						<img src="{{asset('images/locale/en.png')}}" alt="En"/>
+					{% endif %}
 				</span>
 				<div class="dropdown-menu" aria-labelledby="dropdown03" style="min-width: 5rem;">
-					<a class="dropdown-item" href="/mi5/en/boutique">
-						<img src="/mi5/images/locale/en.png" alt="En"/>
-					</a>
+					{% if app.request.attributes.get('_locale') == 'fr' %}
+						<a class="dropdown-item" href="{{ path(route, params | merge({'_locale': 'en' })) }}">
+							<img src="{{asset('images/locale/en.png')}}" alt="Fr"/>
+						</a>
+					{% else %}
+						<a class="dropdown-item" href="{{ path(route, params | merge({'_locale': 'fr' })) }}">
+							<img src="{{asset('images/locale/fr.png')}}" alt="En"/>
+						</a>
+					{% endif %}
 				</div>
 			</li>
 		</ul>

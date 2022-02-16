@@ -13,18 +13,23 @@ user_index:
   controller: App\Controller\UserController::index
   requirements:
     _locale: "%app.supported_locales%"
-
+  defaults:
+    _locale: fr
 user_new:
   path: /user/new
   controller: App\Controller\UserController::new
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 user_orders:
   path: /user/orders
   controller: App\Controller\UserController::orders
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 app_login:
   path: /login
@@ -35,68 +40,90 @@ app_logout:
   controller: App\Controller\SecurityController:login
 
 shop_index:
-  path: /shop
+  path: /{_locale}/shop
   controller: App\Controller\ShopController::index
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 shop_search:
-  path: /shop/search/{search}
+  path: /{_locale}/shop/search/{search}
   controller: App\Controller\ShopController::search
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 shop_department:
-  path: /shop/department/{categoryId}
+  path: /{_locale}/shop/department/{categoryId}
   controller: App\Controller\ShopController::department
   methods: GET|HEAD
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_index:
-  path: /cart
+  path: /{_locale}/cart
   controller: App\Controller\CartController::index
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_nbProducts:
-  path: /cart/nbProducts
+  path: /{_locale}/cart/nbProducts
   controller: App\Controller\CartController::nbProducts
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_add:
-  path: /cart/add/{productId}/{quantity}
+  path: /{_locale}/cart/add/{productId}/{quantity}
   controller: App\Controller\CartController::add
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_remove:
-  path: /cart/remove/{productId}/{quantity}
+  path: /{_locale}/cart/remove/{productId}/{quantity}
   controller: App\Controller\CartController::remove
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_delete:
-  path: /cart/delete/{productId}
+  path: /{_locale}/cart/delete/{productId}
   controller: App\Controller\CartController::delete
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_clear:
-  path: /cart/clear
+  path: /{_locale}/cart/clear
   controller: App\Controller\CartController::clear
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 cart_validation:
-  path: /cart/validation
+  path: /{_locale}/cart/validation
   controller: App\Controller\CartController::validation
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
 
 contact_index:
-  path: /contact
+  path: /{_locale}/contact
   controller: App\Controller\ContactController::index
   requirements:
     _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
