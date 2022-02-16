@@ -1,6 +1,6 @@
 {# templates/nbProducts.html.twig #}
 
-<a class="nav-link" href="/cart">
+<a class="nav-link" href="{{path('cart_index')}}">
 	<i class="fas fa-shopping-cart"></i>
 	{{ nbProducts ~ ('default.navbar.nbOfProducts'|trans) }}
 </a>

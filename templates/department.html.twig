@@ -18,7 +18,7 @@
 		<div class="card-body row">
 			{% for product in products %}
 				<div class="col-md-4">
-					<div class="card clickable" onclick={{"location='/cart/add/" ~ product.id ~ "/1'"}}>
+					<div class="card clickable" onclick={{"location='/" ~ app.request.attributes.get('_locale') ~ "/cart/add/" ~ product.id ~ "/1'"}}>
 						<img src={{asset(product.image)}} class="card-img-produit" alt={{product.name}}>
 						<div class="card-body">
 							<h4 class="card-title">{{product.name}}</h4>
