@@ -4,6 +4,12 @@
 	User index
 {% endblock %}
 
+{% set userOrders = app.user.getOrders() %}
+{%	set nbUserOrders = 0  %}
+{% for order in userOrders  %}
+	{% set nbUserOrders = nbUserOrders + 1  %}
+{% endfor  %}
+
 {% block body %}
 	{% if app.user %}
 		<div class="col-8 offset-2">
@@ -54,7 +60,7 @@
 							</th>
 							<td>
 								<a class="btn btn-primary" href="{{ path('user_orders') }}">
-									<span class="badge badge-light">0</span>
+									<span class="badge badge-light">{{ nbUserOrders }}</span>
 									Commande(s)
 								</a>
 							</td>
@@ -63,6 +69,5 @@
 				</div>
 			</div>
 		</div>
-		<a href="{{ path('user_new') }}">Create new</a>
 	{% endif %}
 {% endblock %}
