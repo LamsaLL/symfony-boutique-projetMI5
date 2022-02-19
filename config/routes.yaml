@@ -15,6 +15,7 @@ user_index:
     _locale: "%app.supported_locales%"
   defaults:
     _locale: fr
+
 user_new:
   path: /user/new
   controller: App\Controller\UserController::new
@@ -42,6 +43,14 @@ app_logout:
 shop_index:
   path: /{_locale}/shop
   controller: App\Controller\ShopController::index
+  requirements:
+    _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
+
+shop_search_all:
+  path: /{_locale}/shop/search
+  controller: App\Controller\ShopController::search
   requirements:
     _locale: "%app.supported_locales%"
   defaults:
