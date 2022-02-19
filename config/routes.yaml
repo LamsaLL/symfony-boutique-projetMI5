@@ -9,7 +9,7 @@ index:
     _locale: fr
 
 user_index:
-  path: /user
+  path: /{_locale}/user
   controller: App\Controller\UserController::index
   requirements:
     _locale: "%app.supported_locales%"
@@ -17,7 +17,7 @@ user_index:
     _locale: fr
 
 user_new:
-  path: /user/new
+  path: /{_locale}/user/new
   controller: App\Controller\UserController::new
   requirements:
     _locale: "%app.supported_locales%"
@@ -25,7 +25,7 @@ user_new:
     _locale: fr
 
 user_orders:
-  path: /user/orders
+  path: /{_locale}/user/orders
   controller: App\Controller\UserController::orders
   requirements:
     _locale: "%app.supported_locales%"
