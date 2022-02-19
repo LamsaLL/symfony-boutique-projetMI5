@@ -25,7 +25,7 @@
 						{% for userOrder in userOrders  %}
 							<tr class="text-danger" style='font-weight: bold;'>
 								<td>{{ userOrder.id }}</td>
-								<td>{{ userOrder.date | date('Y-m-d') }}</td>
+								<td>{{ userOrder.date | date('Y-m-d H:i:s', "Europe/Paris") }}</td>
 								<td>
 									<i class="fas fa-hourglass-half" data-toggle="tooltip" title="validation en Attente" data-placement="right"></i>
 								</td>
