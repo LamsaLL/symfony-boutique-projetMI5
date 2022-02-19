@@ -28,7 +28,6 @@ security:
 
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#the-firewall
-
       # https://symfony.com/doc/current/security/impersonating_user.html
       # switch_user: true
 
@@ -36,9 +35,15 @@ security:
   # Note: Only the *first* access control that matches will be used
   # TODO: Définir les bonnes routes
   access_control:
-    - { path: ^/admin, roles: ROLE_ADMIN } # (%app.supported_locales%)
-    - { path: ^/user, roles: ROLE_CLIENT }
-    - { path: ^/user/orders, roles: ROLE_CLIENT }
+    - { path: ^/(%app.supported_locales%)/admin, roles: ROLE_ADMIN }
+    - {
+        path: ^/(%app.supported_locales%)/user,
+        roles: [ROLE_ADMIN, ROLE_CLIENT],
+      }
+    - {
+        path: ^/(%app.supported_locales%)/cart/validation,
+        roles: [ROLE_ADMIN, ROLE_CLIENT],
+      }
 
 when@test:
   security:
