@@ -22,7 +22,6 @@ class ProductRepository extends ServiceEntityRepository
 
   public function createPoduct()
   {
-    // TODO
     $product = new Product();
     $product->setName('Un nouveau produit');
     $product->setPrice(19.99);
