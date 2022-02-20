@@ -9,15 +9,23 @@ index:
     _locale: fr
 
 user_index:
-  path: /{_locale}/user
+  path: /{_locale}/admin/user
   controller: App\Controller\UserController::index
   requirements:
     _locale: "%app.supported_locales%"
   defaults:
     _locale: fr
 
+user_show:
+  path: /{_locale}/user/show
+  controller: App\Controller\UserController::show
+  requirements:
+    _locale: "%app.supported_locales%"
+  defaults:
+    _locale: fr
+
 user_new:
-  path: /{_locale}/user/new
+  path: /{_locale}/admin/user/new
   controller: App\Controller\UserController::new
   requirements:
     _locale: "%app.supported_locales%"

@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Mon compte
+{% endblock %}
+
+{% set userOrders = app.user.getOrders() %}
+{%	set nbUserOrders = 0  %}
+{% for order in userOrders  %}
+	{% set nbUserOrders = nbUserOrders + 1  %}
+{% endfor  %}
+
+{% block body %}
+	{% if app.user %}
+		<div class="col-8 offset-2">
+			<div class="card">
+				<div class="card-header">
+					<h3>
+						<i class="fas fa-user-check"></i>
+						Mon Compte
+					</h3>
+				</div>
+				<div class="card-body">
+					<table class="table table-striped table-sm table-hover">
+						<tr>
+							<th>
+								N° Client
+							</th>
+							<td>
+								{{ app.user.id }}
+							</td>
+						</tr>
+						<tr>
+							<th>
+								Nom
+							</th>
+							<td>
+								{{ app.user.name }}
+							</td>
+						</tr>
+						<tr>
+							<th>
+								Prénom
+							</th>
+							<td>
+								{{ app.user.firstName }}
+							</td>
+						</tr>
+						<tr>
+							<th>
+								Email
+							</th>
+							<td>
+								{{ app.user.email }}
+							</td>
+						</tr>
+						<tr>
+							<th>
+								Activité
+							</th>
+							<td>
+								<a class="btn btn-primary" href="{{ path('user_orders') }}">
+									<span class="badge badge-light">{{ nbUserOrders }}</span>
+									Commande(s)
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}
