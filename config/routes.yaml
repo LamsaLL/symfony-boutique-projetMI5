@@ -104,6 +104,7 @@ cart_add:
     _locale: "%app.supported_locales%"
   defaults:
     _locale: fr
+    quantity: 1
 
 cart_remove:
   path: /{_locale}/cart/remove/{productId}/{quantity}
@@ -112,6 +113,7 @@ cart_remove:
     _locale: "%app.supported_locales%"
   defaults:
     _locale: fr
+    quantity: 1
 
 cart_delete:
   path: /{_locale}/cart/delete/{productId}

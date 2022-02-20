@@ -26,7 +26,6 @@ class CartController extends AbstractController
     ]);
   }
 
-  //TODO: set $quantity to 1 if it is not set
   public function add($productId, $quantity, CartService $cart)
   {
     // add new product to cart
@@ -35,7 +34,6 @@ class CartController extends AbstractController
     return $this->redirectToRoute('cart_index');
   }
 
-  //TODO: set $quantity to 1 if it is not set
   public function remove($productId, $quantity, CartService $cart)
   {
     // remove product to cart
@@ -65,7 +63,6 @@ class CartController extends AbstractController
     EntityManagerInterface $entityManager
   ) {
     $user = $this->getUser();
-    // $user = $entityManager->getRepository('App\Entity\User')->findOneBy(['email' => $userId]);
 
     $order = $cart->cartToOrder($user);
 

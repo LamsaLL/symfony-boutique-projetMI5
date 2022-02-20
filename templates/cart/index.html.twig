@@ -26,8 +26,6 @@
 					</a>
 				{% endif %}
 			</div>
-			{# TODO: Check if products exist or not empty #}
-
 			<div class="card-body">
 				{% if products|length > 0 %}
 					<div class="row">
@@ -59,11 +57,11 @@
 											€
 										</td>
 										<td>
-											<a href={{path("cart_remove",{productId: product.product.id , quantity: "1"} )}}>
+											<a href={{path("cart_remove",{productId: product.product.id} )}}>
 												<i class="fas fa-minus-square text"></i>
 											</a>
 											{{ product.quantity }}
-											<a href={{path("cart_add",{productId: product.product.id , quantity: "1"} )}}>
+											<a href={{path("cart_add",{productId: product.product.id} )}}>
 												<i class="fas fa-plus-square text-muted"></i>
 											</a>
 										</td>
